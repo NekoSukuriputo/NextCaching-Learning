@@ -5,6 +5,9 @@ export default async function MessagesPage() {
     headers: {
       'X-ID': 'page',
     },
+   next: {
+     revalidate: 5,
+   }
   });
   const messages = await response.json();
 
